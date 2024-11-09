@@ -1,0 +1,70 @@
+@font-face {
+    font-family: Digital Counter;
+    src: url(../../assets/fonts/digital_counter_7.ttf);
+}
+
+.main{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ornament{
+        position: absolute; 
+        &:first-child{
+            left: -50px;
+            top: -50px;
+            img{
+                rotate: -30deg;
+            }
+        }
+        &:last-child{
+            right: -50px;
+            bottom: -50px;
+            rotate: 150deg;            
+        }
+        img{
+            width: 400px;
+        }
+    }
+
+    .counter-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        h1{
+            font-family: Digital Counter;
+            font-size: 4rem;
+        }
+        .counter{
+            position: relative;  
+            button{
+                border: none;
+                border-radius: 50pc ;
+                cursor: pointer;
+            }
+            .increment{
+                width: 250px;
+                height: 250px;
+                font-size: 4rem;
+                background-color: var(--green);
+            }
+            .reset{
+                position: absolute;
+                z-index: 1000;
+                width: 75px;
+                height: 75px;
+                background-color: var(--orange);
+                right: 0;
+                bottom: 25px;
+                img{
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+}

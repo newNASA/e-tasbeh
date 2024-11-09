@@ -1,0 +1,17 @@
+:root{
+    --bg:#fffff0;
+    --green:#238b45;
+    --orange:#ff8d21;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    // border: 1px solid red;
+}
+
+.App{
+    background-color: var(--bg);
+    height: 100vh;
+}
