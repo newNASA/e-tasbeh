@@ -47,6 +47,7 @@
                 cursor: pointer;
                 outline: none;
                 user-select: none;
+                transition: 0.05s;
                 
                 &:active{
                     transform: scale(0.95);
@@ -79,6 +80,7 @@
 
 @media screen and (max-width: 426px) {
     .main{
+        height: 100dvh;
         .ornament{
             img{
                 width: 200px;
@@ -91,13 +93,6 @@
                 right: -25px;
                 bottom: -10px;
             }
-        }
-        .counter-container{
-            .counter{
-                button{
-                    
-                }
-            }
-        }
+        }   
     }
 }
