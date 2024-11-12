@@ -41,10 +41,16 @@
         }
         .counter{
             position: relative;  
-            button{
+            button{     
                 border: none;
                 border-radius: 50pc ;
                 cursor: pointer;
+                outline: none;
+                user-select: none;
+                
+                &:active{
+                    transform: scale(0.95);
+                }
             }
             .increment{
                 width: 250px;
@@ -63,6 +69,33 @@
                 img{
                     width: 35px;
                     height: 35px;
+                }
+            }
+        }
+    }
+}
+
+// Styles for the Mobile 
+
+@media screen and (max-width: 426px) {
+    .main{
+        .ornament{
+            img{
+                width: 200px;
+            }
+            &:first-child{
+                left: -25px;
+                top:  -10px;
+            }
+            &:last-child{
+                right: -25px;
+                bottom: -10px;
+            }
+        }
+        .counter-container{
+            .counter{
+                button{
+                    
                 }
             }
         }

@@ -27,7 +27,7 @@ class Main extends Component {
                     <img src={ornament}></img>
                 </div>
 
-                {/* Counter Codes */}
+                {/* Counter Codes */} 
 
                 <div className="counter-container">
                     <div className="value">
