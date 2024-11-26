@@ -47,6 +47,7 @@
                 cursor: pointer;
                 outline: none;
                 user-select: none;
+                -webkit-tap-highlight-color: transparent;
                 transition: 0.05s;
                 
                 &:active{
