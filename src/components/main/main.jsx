@@ -8,16 +8,30 @@ class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            counter: 0
+            counter: 0,
         }
     }
 
+    componentDidMount(){
+        const savedCount = localStorage.getItem("counter"); 
+        if(savedCount){
+            this.setState({ counter: parseInt(savedCount, 10) }); 
+        }
+    }
+    
+    saveCountToLocalStorage = (newCount) => {
+        localStorage.setItem("count", newCount);
+    };
+
     onIncrement = () => {
-        this.setState(prevState => ({ counter: prevState.counter + 1 }))
+        this.setState(
+            (prevState) => ({ counter: prevState.counter + 1 }),
+            () => localStorage.setItem("counter", this.state.counter)
+        )
     }
 
     onReset = () => {
-        this.setState({ counter: 0 });
+        this.setState({counter: 0}, () => localStorage.setItem("counter", 0));
     }
 
     render() {
